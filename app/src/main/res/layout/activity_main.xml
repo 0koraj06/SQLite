@@ -1,44 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    tools:context="com.example.a0koraj06.sqlite.MainActivity">
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="305dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="305dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="305dp" />
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="217dp"
+        android:layout_height="41dp"
+        android:hint="ID" />
 
     <EditText
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Title"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="99dp" />
+        android:hint="Title" />
 
     <EditText
         android:id="@+id/artist"
@@ -46,9 +26,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Artist"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="152dp" />
+        android:hint="Artist"
+        />
 
     <EditText
         android:id="@+id/year"
@@ -56,24 +35,31 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Year"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="205dp" />
+        android:hint="Year"
+        />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="305dp" />
+        android:hint="@string/button" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="217dp"
-        android:layout_height="41dp"
-        android:text="ID"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="48dp" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete" />
+
+</LinearLayout>

@@ -33,7 +33,8 @@ public class MyHelper extends SQLiteOpenHelper{
         db.execSQL ("DROP TABLE IF EXISTS Music");
         onCreate(db);
     }
-    public long insertRecord(String Title, String Artist, Long Year)
+
+    public long insertRecord(String Title, String Artist, long Year)
     {
         SQLiteDatabase db = getWritableDatabase();
         SQLiteStatement stmt = db.compileStatement

@@ -2,6 +2,9 @@ package com.example.a0koraj06.sqlite;
 
 
 //import android.database.sqlite.SQLiteOpenHelper;
+import android.content.Intent;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +14,16 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-  //   SQLiteOpenHelper MyHelper helper ;
+    MyHelper helper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      //  helper = MyHelper();
+
+        helper = new MyHelper(this);
 
         Button one = (Button) findViewById(R.id.button);
         one.setOnClickListener(this); // calling onClick() method
@@ -37,12 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view) {
 
-
         EditText Title = (EditText) findViewById(R.id.title);
-        //String title = title
+        String title = Title.getText().toString() ;
+
         EditText Artist = (EditText) findViewById(R.id.artist);
+        String artist = Artist.getText().toString();
 
         EditText Year = (EditText) findViewById(R.id.year);
+        long year = Long.parseLong(Year.getText().toString());
+
+        long id =  helper.insertRecord(title,artist,year);
+
+        new AlertDialog.Builder(this).setPositiveButton("OK", null).
+                setMessage(""+id).show();
 
     }
 }
